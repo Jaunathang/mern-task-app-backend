@@ -15,9 +15,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors({
     // Note: The origin property below accepts multiple URIs
-    origin: ["http://localhost:3000"]
+    origin: ["http://localhost:3000", "https://jaunathang-mern-task-app.onrender.com/"]
 }));
-app.use("/api/tasks",taskRoutes);
+app.use("/api/tasks", taskRoutes);
 
 // Routes
 app.get("/", (req, res) => {
